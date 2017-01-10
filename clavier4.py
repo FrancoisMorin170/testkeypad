@@ -23,15 +23,10 @@ mraa.Gpio(14).dir(mraa.DIR_IN)
 
 mraa.Gpio(35).write(0)
 mraa.Gpio(26).write(0)
-mraa.Gpio(25).write(1)
-mraa.Gpio(13).write(0)       #Sortie d une colonne
+mraa.Gpio(25).write(1)	#Colonne 3 active
+mraa.Gpio(13).write(0)       
 
-while True:
-	L1=mraa.Gpio(21).read()		
-        L2=mraa.Gpio(0).read()
-        L3=mraa.Gpio(20).read()
-        L4=mraa.Gpio(14).read()
-	
+while True :	
 	if mraa.Gpio(21).read() == 1: 
 		print 'L1'
 		time.sleep(0.2)
